@@ -72,21 +72,34 @@ body {
 
 .task ul {
     list-style: none;
-    padding: 10px;
-    margin: 10px 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    display: flex; /* Align text and icon horizontally */
-    justify-content: space-between; /* Push icon to the end */
-    align-items: center; /* Vertically align the text and icon */
-    color: white;
+    padding: 0;
+    margin: 0;
 }
 
+/* Make each LI a flex container */
+.task ul li {
+    display: flex;
+    justify-content: space-between; /* Push text to left, icons to right */
+    align-items: center; /* Align text and icons vertically */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+/* Icon container */
+.icon-container {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+/* Icons */
 .task ul i {
     cursor: pointer;
     color: black;
     font-size: 1.2rem;
     transition: color 0.3s, transform 0.2s;
+    padding: 5px;
 }
 
 .task ul i:hover {
